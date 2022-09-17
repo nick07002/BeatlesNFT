@@ -4,10 +4,28 @@
 
 1，名字：Beatles 机甲战士
 2，代号：Beatles
-3，总量：无上限（四十八个小时public mint window)，但是要提供一个stop接口，如果mint过多，可能在24-36小时直接停止。
-4，预留数量: 100 
-5，预售时间两个小时：美东晚九点到十一点，美西晚六点到八点，九月十九日；中国北京九月二十日早上九点到十一点；一个钱包mint两个
-6，公售时间四十八个小时：九月十九日美东晚十一点，美西八点；中国北京时间九月二十日上午十一点点，一个钱包mint一个
+3，总量：10，000（四十八个小时public mint window)，但是要提供一个stop接口，如果mint过多，可能在24-36小时直接停止。
+4，预留数量: 500 （as gift)
+5，预售时间两个小时：9/19/2022 21:00-23:00 EST美国东部时间；9/20/2022 9:00-11:00am 北京时间 一个钱包最多mint两个
+   这两个小时只有WL可以mint
+6，公售时间四十八个小时：从 9/19/2022 23:00 EST美国东部时间；9/20/2022 11:00am 北京时间 开始，一个钱包mint一个
 7，48个小时后关闭（美东九月二十一日晚上九点，美西晚上十一点；中国北京九月二十二日上午九点）
-8，开图时间：美东九月二十九日晚上九点，美西十一点；中国北京九月十月一日上午九九月十九日点
+8，开图时间：9/29/2022 20:00 EST美国东部时间
 9，mint price 0.01 ETHW
+
+
+Todo:
+1. RPC的链接
+2. 找一个钱包
+3. Allan哥找core帮忙发合约
+4. WebPage：小米帮忙
+5. 【第二阶段，盲盒发行后】彩蛋、经济模型设计
+    图里藏助记词
+    
+    
+ETHW Mainnet Info
+Network Name: ETHW-mainnet
+New RPC URL:  https://mainnet.ethereumpow.org
+Chain ID: 10001
+Currency Symbol: ETHW
+Block Explorer URL(Optional): https://mainnet.ethwscan.com
