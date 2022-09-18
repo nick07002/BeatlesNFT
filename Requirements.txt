@@ -32,3 +32,10 @@ New RPC URL:  https://mainnet.ethereumpow.org
 Chain ID: 10001
 Currency Symbol: ETHW
 Block Explorer URL(Optional): https://mainnet.ethwscan.com
+
+
+9/17 20:00 PT meeting.
+1. Use flags to decide mint start time ? Save gas fee. 2 flags: presale start, public sale start. by Soon
+2. 配合Nft marketplace上线 市场首发？
+3. 分叉生态，三个第一：第一个原生nft,第一个token,第一个dex, marketplace.  by 小米
+4.
