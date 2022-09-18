@@ -12,6 +12,9 @@
 7，48个小时后关闭（美东九月二十一日晚上九点，美西晚上十一点；中国北京九月二十二日上午九点）
 8，开图时间：9/29/2022 20:00 EST美国东部时间
 9，mint price 0.01 ETHW
+10. 版税：2.5% (交易所 eip-2891)
+11. 收入7/3分  30%：awsb (15%->33, 15%->core)
+12. market place coming soon.. support OTC exchange. discord...
 
 
 Todo:
@@ -21,7 +24,7 @@ Todo:
 4. WebPage：小米帮忙
 5. 【第二阶段，盲盒发行后】彩蛋、经济模型设计
     图里藏助记词
-    
+6. IPFS的账单问题？
     
 ETHW Mainnet Info
 Network Name: ETHW-mainnet
