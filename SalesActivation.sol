@@ -9,10 +9,39 @@ contract SalesActivation is Ownable {
     // public sales start time
     uint256 public publicSalesStartTime;
 
-    // pre sales seconds
-    uint256 public preSalesSeconds = 60 * 60 * 1;
+    // public sales end time
+    uint256 public publicSalesEndTime;
 
-    modifier isSalesActive() {
+    // pre sales start time
+    uint256 public preSalesStartTime;
+
+    // public sales end time
+    uint256 public preSalesEndTime;
+
+    constructor() {}
+
+    // ------------------------------------------- public sales
+    // set public sales time
+    function setPublicSalesTime(uint256 _startTime, uint256 _endTime) external onlyOwner {
+        require(
+            _endTime >= _startTime,
+            "Public sales: End time should be later than start time"
+        );
+        publicSalesStartTime = _startTime;
+        publicSalesEndTime = _endTime;
+    }
+
+    // is public sales activated
+    function isPublicSalesActivated() public view returns (bool) {
+        return
+            publicSalesStartTime > 0 &&
+            publicSalesEndTime > 0 &&
+            block.timestamp >= publicSalesStartTime &&
+            block.timestamp <= publicSalesEndTime;
+    }
+
+    // is public sales activated (modifier)
+    modifier isPublicSalesActive() {
         require(
             isPublicSalesActivated(),
             "Public sales: Sale is not activated"
@@ -20,32 +49,39 @@ contract SalesActivation is Ownable {
         _;
     }
 
-    constructor() {}
-
-    // set public sales time
-    function setPublicSalesTime(uint256 _startTime) external onlyOwner {
-        publicSalesStartTime = _startTime;
+    // ------------------------------------------- pre sales
+    // set pre sales time
+    function setPreSalesTime(uint256 _startTime, uint256 _endTime)
+        external
+        onlyOwner
+    {
+        require(
+            _endTime >= _startTime,
+            "Pre sales: End time should be later than start time"
+        );
+        preSalesStartTime = _startTime;
+        preSalesEndTime = _endTime;
     }
 
-    // set pre sales seconds
-    function setPreSalesSeconds(uint256 _seconds) external onlyOwner {
-        preSalesSeconds = _seconds;
+
+    // is pre sales active
+    modifier isPreSalesActive() {
+        require(
+            isPreSalesActivated(),
+            "Pre sales: Sale is not activated"
+        );
+        _;
     }
 
-    // is public sales activated
-    function isPublicSalesActivated() public view returns (bool) {
+    // is pre sales activated
+    function isPreSalesActivated() public view returns (bool) {
         return
-            publicSalesStartTime > 0 && block.timestamp >= publicSalesStartTime;
+            preSalesStartTime > 0 &&
+            preSalesEndTime > 0 &&
+            block.timestamp >= preSalesStartTime &&
+            block.timestamp <= preSalesEndTime;
     }
 
-    function current()  public view returns (uint256) {
-        return block.timestamp;
-    }
-
-    // is the time still in presales
-    function isInPresales() public view returns (bool) {
-        return block.timestamp - publicSalesStartTime < preSalesSeconds;
-    }
 
  
 }
